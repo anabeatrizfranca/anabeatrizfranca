@@ -10,83 +10,228 @@
         content="width=device-width, initial-scale=1.0"
     >
 
+    <meta
+        name="description"
+        content="Courses and certifications — Ana Beatriz."
+    >
+
     <title>Courses &amp; Certifications — Ana Beatriz</title>
 
     <link rel="stylesheet" href="style.css">
 
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('ab-portfolio-theme') === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <style>
 
-        .courses-page {
+        .courses-hero {
 
-            min-height: 100vh;
-
-            padding: 140px 8vw;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
+            padding: 160px 8vw 60px;
         }
 
-        .courses-page .eyebrow {
-            color: var(--pink);
+        .courses-hero .eyebrow {
+            display: block;
+            margin-bottom: 18px;
         }
 
-        .courses-page h1 {
+        .courses-hero h1 {
 
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-family: var(--font-display);
+
+            font-size: clamp(2.6rem, 6vw, 4.5rem);
 
             line-height: 0.95;
 
-            letter-spacing: -0.06em;
+            letter-spacing: -0.05em;
 
-            margin-top: 15px;
-
+            font-weight: 800;
         }
 
-        .courses-page h1 span {
+        .courses-hero h1 .accent {
             color: var(--pink);
         }
 
-        .courses-page p {
+        .courses-hero p {
 
-            max-width: 500px;
+            max-width: 560px;
 
             margin-top: 25px;
 
             color: var(--muted);
 
             line-height: 1.7;
-
         }
 
         .back-home {
 
-            display: inline-block;
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
 
             width: fit-content;
 
-            margin-top: 45px;
+            margin-top: 40px;
 
-            padding: 14px 19px;
+            padding: 13px 19px;
 
             border-radius: 999px;
 
-            color: white;
+            color: var(--bg);
 
-            background: var(--purple);
+            background: var(--text);
 
             font-size: 0.82rem;
             font-weight: 600;
 
-            transition: background 0.25s ease;
-
+            transition: background 0.25s ease, transform 0.25s var(--ease);
         }
 
         .back-home:hover {
             background: var(--pink);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .certificates-section {
+            padding-top: 40px;
+        }
+
+        .certificates-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+        .certificate-card {
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            background: var(--bg-elevated);
+
+            border: 1px solid var(--border);
+
+            box-shadow: var(--card-shadow);
+
+            transition:
+                transform 0.35s var(--ease),
+                border-color 0.35s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--pink);
+        }
+
+        .certificate-image {
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            background: var(--bg-elevated-2);
+        }
+
+        .certificate-image img {
+
+            width: 100%;
+
+            border-radius: 10px;
+
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .certificate-info {
+            padding: 28px 30px 32px;
+        }
+
+        .certificate-kicker {
+
+            color: var(--pink);
+
+            font-size: 0.62rem;
+            font-weight: 700;
+
+            letter-spacing: 0.12em;
+        }
+
+        .certificate-info h3 {
+
+            margin-top: 12px;
+
+            font-family: var(--font-display);
+
+            font-size: 1.35rem;
+
+            font-weight: 800;
+
+            letter-spacing: -0.02em;
+        }
+
+        .certificate-meta {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-top: 10px;
+
+            color: var(--muted);
+
+            font-size: 0.82rem;
+        }
+
+        .certificate-meta .editable {
+
+            padding: 1px 8px;
+
+            border-radius: 999px;
+
+            border: 1px dashed rgba(180, 34, 85, 0.4);
+
+            color: var(--pink);
+
+            font-style: normal;
+        }
+
+        @media (max-width: 900px) {
+
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .courses-hero {
+                padding: 130px 6vw 40px;
+            }
+
+            .certificate-image {
+                padding: 22px;
+            }
+
+            .certificate-info {
+                padding: 22px 22px 26px;
+            }
         }
 
     </style>
@@ -97,26 +242,334 @@
 <body>
 
 
-<section class="courses-page">
+<div class="ambient" aria-hidden="true">
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+</div>
 
-    <p class="eyebrow">COURSES &amp; CERTIFICATIONS</p>
 
-    <h1>This page is <span>coming soon.</span></h1>
+<!-- ================= NAVIGATION ================= -->
 
-    <p>
+<header class="navbar">
 
-        The full list of courses and certifications is
-        being put together. Check back soon, or reach out
-        directly if you'd like details in the meantime.
+    <a href="index.html#home" class="logo">
+        AB<span>.</span>
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html#about">About</a>
+
+        <a href="index.html#projects">Projects</a>
+
+        <a href="index.html#research">Research</a>
+
+        <a href="index.html#skills">Skills</a>
+
+        <a href="index.html#beyond">Beyond Code</a>
+
+        <a href="index.html#curriculum">Curriculum</a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <button
+            class="nav-cta"
+            id="openTalk"
+            type="button"
+        >
+            Let's talk <span>↗</span>
+        </button>
+
+        <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to dark mode"
+        >
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+
+    </div>
+
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Open menu"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<nav class="mobile-menu" id="mobileMenu">
+
+    <a href="index.html#about">About</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#research">Research</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#beyond">Beyond Code</a>
+    <a href="index.html#curriculum">Curriculum</a>
+    <a href="index.html#contact">Contact</a>
+
+    <button
+        class="mobile-theme-toggle"
+        id="mobileThemeToggle"
+        type="button"
+    >
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <span class="toggle-label">Switch to dark mode</span>
+    </button>
+
+</nav>
+
+
+<main>
+
+
+<section class="courses-hero">
+
+    <span class="eyebrow reveal-chars" aria-label="COURSES & CERTIFICATIONS">
+        <span aria-hidden="true">COURSES &amp; CERTIFICATIONS</span>
+    </span>
+
+    <h1 class="reveal-chars" aria-label="Always learning something new.">
+        <span aria-hidden="true">
+            Always learning
+            <br>
+            <span class="accent">something new.</span>
+        </span>
+    </h1>
+
+    <p class="fade-up">
+
+        A collection of courses, certifications and
+        independent learning experiences that complement
+        my formal education.
 
     </p>
 
-    <a href="index.html#curriculum" class="back-home">
+    <a href="index.html#curriculum" class="back-home fade-up">
         ← Back to portfolio
     </a>
 
 </section>
 
+
+<section class="section certificates-section">
+
+    <div class="certificates-grid stagger">
+
+
+        <article class="certificate-card">
+
+            <div class="certificate-image">
+                <img src="assets/certificateadobe.png" alt="Adobe certificate" loading="lazy">
+            </div>
+
+            <div class="certificate-info">
+
+                <p class="certificate-kicker">CERTIFICATION</p>
+
+                <h3><span class="editable">Adobe course name</span></h3>
+
+                <p class="certificate-meta">
+                    <span class="editable">Issuer · Year</span>
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="certificate-card">
+
+            <div class="certificate-image">
+                <img src="assets/certificateapps.png" alt="App development certificate" loading="lazy">
+            </div>
+
+            <div class="certificate-info">
+
+                <p class="certificate-kicker">CERTIFICATION</p>
+
+                <h3><span class="editable">App development course name</span></h3>
+
+                <p class="certificate-meta">
+                    <span class="editable">Issuer · Year</span>
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="certificate-card">
+
+            <div class="certificate-image">
+                <img src="assets/certificategoogle.png" alt="Google certificate" loading="lazy">
+            </div>
+
+            <div class="certificate-info">
+
+                <p class="certificate-kicker">CERTIFICATION</p>
+
+                <h3><span class="editable">Google course name</span></h3>
+
+                <p class="certificate-meta">
+                    <span class="editable">Issuer · Year</span>
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="certificate-card">
+
+            <div class="certificate-image">
+                <img src="assets/certificatepy.png" alt="Python certificate" loading="lazy">
+            </div>
+
+            <div class="certificate-info">
+
+                <p class="certificate-kicker">CERTIFICATION</p>
+
+                <h3><span class="editable">Python course name</span></h3>
+
+                <p class="certificate-meta">
+                    <span class="editable">Issuer · Year</span>
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+        © 2026 Ana Beatriz
+    </p>
+
+    <p>
+        Built with curiosity.
+    </p>
+
+</footer>
+
+
+
+<!-- ================= LET'S TALK CARD (MODAL) ================= -->
+
+<div
+    class="talk-modal"
+    id="talkModal"
+    aria-hidden="true"
+>
+
+    <div class="talk-modal-content">
+
+        <button
+            class="close-talk"
+            id="closeTalk"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+        <p class="eyebrow">
+            GET IN TOUCH
+        </p>
+
+
+        <h2>
+
+            Let's build
+            <br>
+
+            something <span class="accent">great.</span>
+
+        </h2>
+
+
+        <a
+            href="mailto:anafrajor@gmail.com"
+            class="email-link"
+        >
+            anafrajor@gmail.com ↗
+        </a>
+
+
+        <div class="social-links">
+
+            <a
+                href="https://github.com/anabeatrizfranca"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub ↗
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/ana-beatriz-franca"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn ↗
+            </a>
+
+
+            <a
+                href="https://scholar.google.com/citations?pli=1&authuser=1&user=o1WYJUQAAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Google Scholar ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
 
 </body>
 

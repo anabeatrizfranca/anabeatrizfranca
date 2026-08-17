@@ -17,12 +17,35 @@
 
     <title>Ana Beatriz — Software Development</title>
 
+    <meta property="og:title" content="Ana Beatriz — Software Development">
+    <meta property="og:description" content="Software Development student, researcher, builder and curious learner.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('ab-portfolio-theme') === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
 
 </head>
 
 
 <body>
+
+
+<!-- Ambient background glows: fixed, behind all content -->
+<div class="ambient" aria-hidden="true">
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+</div>
 
 
 <!-- ================= NAVIGATION ================= -->
@@ -51,13 +74,32 @@
     </nav>
 
 
-    <button
-        class="nav-cta"
-        id="openTalk"
-        type="button"
-    >
-        Let's talk <span>↗</span>
-    </button>
+    <div class="nav-actions">
+
+        <button
+            class="nav-cta"
+            id="openTalk"
+            type="button"
+        >
+            Let's talk <span>↗</span>
+        </button>
+
+        <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to dark mode"
+        >
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+
+    </div>
 
 
     <button
@@ -84,6 +126,21 @@
     <a href="#curriculum">Curriculum</a>
     <a href="#contact">Contact</a>
 
+    <button
+        class="mobile-theme-toggle"
+        id="mobileThemeToggle"
+        type="button"
+    >
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <span class="toggle-label">Switch to dark mode</span>
+    </button>
+
 </nav>
 
 
@@ -96,9 +153,11 @@
 
     <div class="hero-visual">
 
-        <div class="decorative-circle circle-yellow"></div>
+        <div class="decorative-ring ring-yellow float"></div>
 
-        <div class="decorative-circle circle-blue"></div>
+        <div class="decorative-ring ring-blue float float-delay"></div>
+
+        <span class="dot dot-pink float"></span>
 
 
         <div class="profile-image">
@@ -115,17 +174,17 @@
 
     <div class="hero-content">
 
-        <p class="eyebrow">
-            HELLO, I'M
-        </p>
+        <span class="eyebrow reveal-chars" aria-label="HELLO, I'M">
+            <span aria-hidden="true">HELLO, I'M</span>
+        </span>
 
 
-        <h1>
-            Ana Beatriz<span>.</span>
+        <h1 class="reveal-chars" aria-label="Ana Beatriz.">
+            <span aria-hidden="true">Ana Beatriz<span class="accent">.</span></span>
         </h1>
 
 
-        <p class="hero-description">
+        <p class="hero-description fade-up">
 
             Software development student, curious builder,
             researcher and lifelong learner exploring
@@ -134,7 +193,7 @@
         </p>
 
 
-        <div class="hero-buttons">
+        <div class="hero-buttons fade-up">
 
             <a
                 href="#projects"
@@ -147,7 +206,7 @@
         </div>
 
 
-        <div class="currently">
+        <div class="currently fade-up">
 
             <span class="status-dot"></span>
 
@@ -178,7 +237,7 @@
     class="section about-section"
 >
 
-    <div class="section-label">
+    <div class="section-label fade-up">
 
         <span>01</span>
 
@@ -189,19 +248,20 @@
 
     <div class="about-grid">
 
-        <h2>
+        <h2 class="reveal-chars" aria-label="More than just code.">
 
-            More than
-            <br>
-
-            <span>just code.</span>
+            <span aria-hidden="true">
+                More than
+                <br>
+                <span class="accent">just code.</span>
+            </span>
 
         </h2>
 
 
         <div class="about-content">
 
-            <p class="large-text">
+            <p class="large-text fade-up">
 
                 I'm interested in technology not only as
                 something to build, but as a way to create
@@ -210,7 +270,7 @@
             </p>
 
 
-            <p>
+            <p class="fade-up">
 
                 My interests lie at the intersection of
                 technology, people and purpose — especially
@@ -221,7 +281,7 @@
             </p>
 
 
-            <p>
+            <p class="fade-up">
 
                 I'm particularly curious about software
                 designed with purpose: technology that is
@@ -231,7 +291,7 @@
             </p>
 
 
-            <p>
+            <p class="fade-up">
 
                 I enjoy learning independently, experimenting
                 with ideas and turning what I learn into
@@ -254,7 +314,7 @@
     class="section projects-section"
 >
 
-    <div class="section-label">
+    <div class="section-label fade-up">
 
         <span>02</span>
 
@@ -263,7 +323,7 @@
     </div>
 
 
-    <div class="projects-list">
+    <div class="projects-list stagger">
 
 
         <article class="project">
@@ -347,7 +407,7 @@
     class="section research-section"
 >
 
-    <div class="section-label">
+    <div class="section-label fade-up">
 
         <span>03</span>
 
@@ -360,18 +420,18 @@
 
         <div>
 
-            <h2>
-                Research
+            <h2 class="reveal-chars" aria-label="Research">
+                <span aria-hidden="true">Research</span>
             </h2>
 
-            <p class="research-tagline">
+            <p class="research-tagline fade-up">
                 Curiosity drives the work.
             </p>
 
         </div>
 
 
-        <p>
+        <p class="fade-up">
 
             A collection of questions, ideas and research
             exploring technology, people, work and the
@@ -382,7 +442,7 @@
     </div>
 
 
-    <div class="research-meta">
+    <div class="research-meta fade-up">
 
         <a
             class="research-meta-item"
@@ -390,7 +450,9 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-            <span class="meta-icon" aria-hidden="true">GS</span>
+            <span class="meta-icon">
+                <img src="assets/scholars.png" alt="" loading="lazy">
+            </span>
 
             <div>
                 <small>My Google Scholar profile</small>
@@ -401,8 +463,8 @@
 
         <div class="research-meta-item">
 
-            <span class="meta-icon placeholder" aria-hidden="true">
-                <img src="assets/ssrn-logo.png" alt="" onerror="this.style.display='none'">
+            <span class="meta-icon">
+                <img src="assets/ssrn.png" alt="" loading="lazy">
             </span>
 
             <div>
@@ -415,7 +477,7 @@
     </div>
 
 
-    <div class="research-list">
+    <div class="research-list stagger">
 
 
         <article class="research-item">
@@ -508,7 +570,7 @@
     class="section skills-section"
 >
 
-    <div class="section-label">
+    <div class="section-label fade-up">
 
         <span>04</span>
 
@@ -517,7 +579,7 @@
     </div>
 
 
-    <div class="skills-grid">
+    <div class="skills-grid stagger">
 
 
         <div class="skill-category">
@@ -584,7 +646,7 @@
     class="section beyond-section"
 >
 
-    <div class="section-label">
+    <div class="section-label fade-up">
 
         <span>05</span>
 
@@ -597,19 +659,20 @@
 
         <div>
 
-            <h2>
+            <h2 class="reveal-chars" aria-label="There's a lot beyond the screen.">
 
-                There's a lot
-                <br>
-
-                <span>beyond the screen.</span>
+                <span aria-hidden="true">
+                    There's a lot
+                    <br>
+                    <span class="accent">beyond the screen.</span>
+                </span>
 
             </h2>
 
         </div>
 
 
-        <p>
+        <p class="fade-up">
 
             Technology is only one part of my story.
             The people, languages, communities and
@@ -626,7 +689,7 @@
 
     <div class="beyond-subsection">
 
-        <div class="beyond-heading">
+        <div class="beyond-heading fade-up">
 
             <span>01</span>
 
@@ -637,10 +700,14 @@
         </div>
 
 
-        <div class="beyond-cards">
+        <div class="beyond-cards stagger">
 
 
             <article class="beyond-card">
+
+                <div class="beyond-card-logo">
+                    <img src="assets/kimcankologo.png" alt="" loading="lazy">
+                </div>
 
                 <span>
                     TURKEY
@@ -674,6 +741,10 @@
 
             <article class="beyond-card">
 
+                <div class="beyond-card-logo">
+                    <img src="assets/cidologo.png" alt="" loading="lazy">
+                </div>
+
                 <span>
                     RWANDA
                 </span>
@@ -703,7 +774,7 @@
 
     <div class="beyond-subsection">
 
-        <div class="beyond-heading">
+        <div class="beyond-heading fade-up">
 
             <span>02</span>
 
@@ -716,12 +787,12 @@
 
         <div class="language-content">
 
-            <h3>
+            <h3 class="fade-up">
                 Learning beyond borders.
             </h3>
 
 
-            <p>
+            <p class="fade-up">
 
                 Learning languages is one of the ways I
                 challenge myself to understand different
@@ -731,20 +802,27 @@
             </p>
 
 
-            <p>
+            <p class="fade-up">
 
                 I received a Santander Academy scholarship
                 and am currently studying Spanish through
-                Open Mundo. I also participated in an English
-                language competition through OBLI and the
-                Harvard Crimson Global Essay Competition,
+                Open Mundo. I also participated in an
+                <span class="badge-inline">
+                    <img src="assets/obli.png" alt="" loading="lazy">
+                    OBLI
+                </span>
+                English language competition and the
+                <span class="badge-inline">
+                    <img src="assets/hcgeclogo.png" alt="" loading="lazy">
+                    Harvard Crimson Global Essay Competition
+                </span>,
                 experiences that helped me develop my English
                 communication and writing.
 
             </p>
 
 
-            <p>
+            <p class="fade-up">
 
                 Spanish is only one chapter. I hope to keep
                 learning new languages throughout the years.
@@ -835,7 +913,7 @@
     class="section curriculum-section"
 >
 
-    <div class="section-label">
+    <div class="section-label fade-up">
 
         <span>06</span>
 
@@ -849,7 +927,7 @@
 
     <div class="curriculum-subsection">
 
-        <div class="beyond-heading">
+        <div class="beyond-heading fade-up">
 
             <span>01</span>
 
@@ -860,7 +938,7 @@
         </div>
 
 
-        <div class="education-grid">
+        <div class="education-grid stagger">
 
 
             <article class="education-card">
@@ -921,7 +999,7 @@
 
     <div class="curriculum-subsection">
 
-        <div class="beyond-heading">
+        <div class="beyond-heading fade-up">
 
             <span>02</span>
 
@@ -932,7 +1010,7 @@
         </div>
 
 
-        <div class="achievement-list">
+        <div class="achievement-list stagger">
 
 
             <article class="achievement-item">
@@ -960,8 +1038,11 @@
 
 
                     <div class="achievement-photos">
-                        <div class="photo-slot"></div>
-                        <div class="photo-slot"></div>
+                        <img src="assets/wspe.png" alt="WorldSkills Brazil Pernambuco competition" loading="lazy">
+                        <img src="assets/wspe1.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy">
+                        <img src="assets/wspe2.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy">
+                        <img src="assets/wspe3.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy">
+                        <img src="assets/wspe4.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy">
                     </div>
 
                 </div>
@@ -993,7 +1074,10 @@
 
 
                     <div class="achievement-photos">
-                        <div class="photo-slot"></div>
+                        <img src="assets/startuplogo.png" alt="Start-Up competition logo" loading="lazy">
+                        <img src="assets/startup1.jpeg" alt="Start-Up competition" loading="lazy">
+                        <img src="assets/startup2.jpeg" alt="Start-Up competition" loading="lazy">
+                        <img src="assets/startup3.png" alt="Start-Up competition" loading="lazy">
                     </div>
 
                 </div>
@@ -1016,30 +1100,31 @@
     class="contact-section"
 >
 
-    <p class="eyebrow">
-        GET IN TOUCH
+    <p class="eyebrow reveal-chars" aria-label="GET IN TOUCH">
+        <span aria-hidden="true">GET IN TOUCH</span>
     </p>
 
 
-    <h2>
+    <h2 class="reveal-chars" aria-label="Let's build something great.">
 
-        Let's build
-        <br>
-
-        something <span>great.</span>
+        <span aria-hidden="true">
+            Let's build
+            <br>
+            something <span class="accent">great.</span>
+        </span>
 
     </h2>
 
 
     <a
         href="mailto:anafrajor@gmail.com"
-        class="email-link"
+        class="email-link fade-up"
     >
         anafrajor@gmail.com ↗
     </a>
 
 
-    <div class="social-links">
+    <div class="social-links fade-up">
 
         <a
             href="https://github.com/anabeatrizfranca"
@@ -1121,7 +1206,7 @@
             Let's build
             <br>
 
-            something <span>great.</span>
+            something <span class="accent">great.</span>
 
         </h2>
 
