@@ -303,4 +303,127 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+
+    /* ---------- Scrollspy: highlight the nav link for the
+       section currently in view, so navigation always reflects
+       where the visitor actually is on the page. ---------- */
+
+    const spySections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (spySections.length && navLinks.length) {
+
+        const spyObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+
+                        const id = entry.target.getAttribute('id');
+
+                        navLinks.forEach((link) => {
+                            link.classList.toggle(
+                                'active',
+                                link.getAttribute('href') === `#${id}`
+                            );
+                        });
+
+                    }
+                });
+            },
+            { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
+        );
+
+        spySections.forEach((section) => spyObserver.observe(section));
+
+    }
+
+
+    /* ---------- Photo carousels (achievement galleries) ---------- */
+
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+
+        const track = carousel.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const prevBtn = carousel.querySelector('[data-carousel-prev]');
+        const nextBtn = carousel.querySelector('[data-carousel-next]');
+        const dotsWrap = carousel.querySelector('[data-carousel-dots]');
+
+        if (slides.length <= 1) {
+            if (prevBtn) prevBtn.style.display = 'none';
+            if (nextBtn) nextBtn.style.display = 'none';
+            return;
+        }
+
+        let index = 0;
+        let autoplayTimer = null;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.setAttribute('aria-label', `Go to photo ${i + 1}`);
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goTo(i));
+            dotsWrap.appendChild(dot);
+        });
+
+        const dots = Array.from(dotsWrap.children);
+
+        function render() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === index));
+        }
+
+        function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            render();
+        }
+
+        function startAutoplay() {
+            if (prefersReducedMotion) return;
+            stopAutoplay();
+            autoplayTimer = setInterval(() => goTo(index + 1), 5000);
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer) clearInterval(autoplayTimer);
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                goTo(index - 1);
+                startAutoplay();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                goTo(index + 1);
+                startAutoplay();
+            });
+        }
+
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+
+        // Basic swipe support for touch devices
+        let touchStartX = 0;
+
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            stopAutoplay();
+        }, { passive: true });
+
+        track.addEventListener('touchend', (e) => {
+            const deltaX = e.changedTouches[0].clientX - touchStartX;
+            if (Math.abs(deltaX) > 40) {
+                goTo(deltaX < 0 ? index + 1 : index - 1);
+            }
+            startAutoplay();
+        }, { passive: true });
+
+        render();
+        startAutoplay();
+
+    });
+
 });
