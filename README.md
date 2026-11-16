@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=6000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Ana+Beatriz" />
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=6000&pause=1000&color=FFFFF&center=true&vCenter=true&width=600&lines=Ana+Beatriz+França" />
 </p>
-
-### GitHub Statistics
 
 <div align="center">
 
