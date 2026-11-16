@@ -24,9 +24,9 @@
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=FF79C6&icon_color=FFD166&text_color=E6EDF3&rank_icon=default&custom_title=GitHub+Statistics"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=anabeatrizfranca&show_icons=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=FF79C6&icon_color=FFD166&text_color=E6EDF3&rank_icon=default&custom_title=GitHub+Statistics"/>
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&langs_count=6&hide_border=true&bg_color=0D1117&title_color=FF79C6&text_color=E6EDF3&custom_title=Most+Used+Languages&card_width=495"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anabeatrizfranca&layout=compact&langs_count=6&hide_border=true&bg_color=0D1117&title_color=FF79C6&text_color=E6EDF3&custom_title=Most+Used+Languages&card_width=495"/>
 
 </div>
 
@@ -34,7 +34,7 @@
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=YOUR_USERNAME&hide_border=true&background=0D1117&ring=FF79C6&fire=FFD166&currStreakLabel=FF79C6&sideLabels=6CA6D9&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=AAB4C0"/>
+<img src="https://streak-stats.demolab.com?user=anabeatrizfranca&hide_border=true&background=0D1117&ring=FF79C6&fire=FFD166&currStreakLabel=FF79C6&sideLabels=6CA6D9&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=AAB4C0"/>
 
 </div>
 
