@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=3000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Technology+%26+Innovation;Impactful+Solutions;Academic+Research;Entrepreneurship;Always+Learning+Something+New!" />
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&width=600&lines=Technology+%26+Innovation;Impactful+Solutions;Academic+Research;Entrepreneurship;Always+Learning+Something+New!" />
 </p>
 
 
@@ -9,9 +9,9 @@
 
 <div align="center">
 
-<img width="49%" src="https://github-stats-extended.vercel.app/api?username=anabeatrizfranca&show_icons=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=FF79C6&icon_color=FFD166&text_color=E6EDF3&rank_icon=default&custom_title=GitHub+Statistics"/>
+<img width="49%" src="https://github-stats-extended.vercel.app/api?username=anabeatrizfranca&show_icons=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=FFFFFF&icon_color=FFD166&text_color=E6EDF3&rank_icon=default&custom_title=GitHub+Statistics"/>
 
-<img width="49%" src="https://github-stats-extended.vercel.app/api/top-langs/?username=anabeatrizfranca&layout=compact&langs_count=6&hide_border=true&bg_color=0D1117&title_color=FF79C6&text_color=E6EDF3&custom_title=Most+Used+Languages&card_width=495"/>
+<img width="49%" src="https://github-stats-extended.vercel.app/api/top-langs/?username=anabeatrizfranca&layout=compact&langs_count=6&hide_border=true&bg_color=0D1117&title_color=FFFFFF&text_color=E6EDF3&custom_title=Most+Used+Languages&card_width=495"/>
 
 </div>
 
