@@ -1,16 +1,8 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=10000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Ana+Beatriz" />
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=6000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Ana+Beatriz" />
 </p>
 
 ---
-
-###  About Me
-
-- 🎓 Systems Analysis and Development student.
-- 💻 Exploring programming and software development.
-- 🚀 Building academic and personal projects.
-- ✨ Passionate about creativity, innovation and problem-solving.
-- 🌟 Beyond coding, I love sports, books, learning new languages and exploring new experiences!
 
 ### 🛠️ Languages & Technologies
 
@@ -35,6 +27,14 @@
 <img src="https://streak-stats.demolab.com?user=anabeatrizfranca&hide_border=true&background=0D1117&ring=FF79C6&fire=FFD166&currStreakLabel=FF79C6&sideLabels=6CA6D9&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=AAB4C0"/>
 
 </div>
+
+###  About Me
+
+- 🎓 Systems Analysis and Development student.
+- 💻 Exploring programming and software development.
+- 🚀 Building academic and personal projects.
+- ✨ Passionate about creativity, innovation and problem-solving.
+- 🌟 Beyond coding, I love sports, books, learning new languages and exploring new experiences!
 
 ### 🌐 Let's Connect!
 
