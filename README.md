@@ -2,12 +2,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=6000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Ana+Beatriz" />
 </p>
 
-### 🛠️ Languages & Technologies
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=python,js,html,css,kotlin,react,c&theme=dark" />
-</p>
-
 ### 📊 GitHub Statistics
 
 <div align="center">
@@ -17,6 +11,12 @@
 <img width="49%" src="https://github-stats-extended.vercel.app/api/top-langs/?username=anabeatrizfranca&layout=compact&langs_count=6&hide_border=true&bg_color=0D1117&title_color=FF79C6&text_color=E6EDF3&custom_title=Most+Used+Languages&card_width=495"/>
 
 </div>
+
+### 🛠️ Languages & Technologies
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=python,js,html,css,kotlin,react,c&theme=dark" />
+</p>
 
 ### 🌐 Let's Connect!
 
