@@ -2,7 +2,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=6000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Ana+Beatriz" />
 </p>
 
-### 📊 GitHub Statistics
+### GitHub Statistics
 
 <div align="center">
 
@@ -12,7 +12,7 @@
 
 </div>
 
-### 🛠️ Languages & Technologies
+### Languages & Technologies
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=python,js,html,css,kotlin,react,c&theme=dark" />
@@ -31,7 +31,7 @@
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
   </a>
 
-### 🔥 Contribution Streak
+### Contribution Streak
 
 <div align="center">
 
