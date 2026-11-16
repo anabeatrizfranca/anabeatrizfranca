@@ -1,5 +1,16 @@
+
+<h1 align="center">
+  <span style="background-color: #FF79C6; color: #FFFFFF; padding: 4px 12px; font-weight: 800;">
+    Ana Beatriz França
+  </span>
+</h1>
+
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=6000&pause=1000&color=FFFFF&center=true&vCenter=true&width=600&lines=Ana+Beatriz+França" />
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=3000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Aspiring+Software+Developer;Research+%26+Innovation;Always+Learning+Something+New!" />
+</p>
+
+<p align="center">
+  Systems Analysis and Development student interested in software development, academic research and technological innovation. Building projects, learning languages, and exploring technology every day ;)
 </p>
 
 <div align="center">
