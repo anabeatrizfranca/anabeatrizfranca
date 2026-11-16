@@ -18,22 +18,6 @@
 
 </div>
 
-### 🔥 Contribution Streak
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=anabeatrizfranca&hide_border=true&background=0D1117&ring=FF79C6&fire=FFD166&currStreakLabel=FF79C6&sideLabels=6CA6D9&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=AAB4C0"/>
-
-</div>
-
-###  About Me
-
-- 🎓 Systems Analysis and Development student.
-- 💻 Exploring programming and software development.
-- 🚀 Building academic and personal projects.
-- ✨ Passionate about creativity, innovation and problem-solving.
-- 🌟 Beyond coding, I love sports, books, learning new languages and exploring new experiences!
-
 ### 🌐 Let's Connect!
 
 <p align="left">
@@ -46,4 +30,13 @@
    <a href="https://www.instagram.com/anabeatrizfrajor/" target="_blank">
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
   </a>
+
+### 🔥 Contribution Streak
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=anabeatrizfranca&hide_border=true&background=0D1117&ring=FF79C6&fire=FFD166&currStreakLabel=FF79C6&sideLabels=6CA6D9&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=AAB4C0"/>
+
+</div>
+
 </p>
