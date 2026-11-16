@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=3000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Aspiring+Software+Developer;Research+%26+Innovation;Always+Learning+Something+New!" />
+  <img src="https://readme-typing-svg.demolab.com?  font=Poppins&weight=600&size=20&duration=3000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Technology+&+ Innovation;Academic+Research;Entrepreneurship;Always+Learning+Something+New!" />
 </p>
 
 <p align="center">
