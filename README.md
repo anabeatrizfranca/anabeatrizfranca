@@ -1,34 +1,32 @@
-# 👋 Hello, World! I'm Ana Beatriz
-
-<h3 align="center">Aspiring Developer | Systems Analysis and Development Student</h3>
+# Ana Beatriz
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=500&size=20&duration=3000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Exploring+the+world+of+technology;Learning+and+building+new+things;Turning+ideas+into+code!" />
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=3000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Aspiring+Developer;Technology+Enthusiast;Always+Learning+Something+New!" />
 </p>
 
 ---
 
-### 💗 About Me
+###  About Me
 
 - 🎓 Systems Analysis and Development student.
-- 💻 Learning programming and software development.
-- 🚀 Working on academic and personal projects.
-- 🌱 Constantly exploring new technologies and tools.
+- 💻 Exploring programming and software development.
+- 🚀 Building academic and personal projects.
 - ✨ Passionate about creativity, innovation and problem-solving.
+- 🌟 Beyond coding, I love sports, books, learning new languages and exploring new experiences!
 
-### 🛠️ Technologies & Tools
+### 🛠️ Languages & Technologies
 
 <p align="left">
-  <img src="https://skillicons.dev/icons?i=html,css,js,python,c,git,github,vscode&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=python,js,html,css,kotlin,react,c&theme=dark" />
 </p>
 
 ### 📊 GitHub Statistics
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&hide_border=true&bg_color=0D1117&title_color=FF79C6&icon_color=FFD166&text_color=E6EDF3&include_all_commits=true"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=FF79C6&icon_color=FFD166&text_color=E6EDF3&rank_icon=default&custom_title=GitHub+Statistics"/>
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&hide_border=true&bg_color=0D1117&title_color=FF79C6&text_color=E6EDF3"/>
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&langs_count=6&hide_border=true&bg_color=0D1117&title_color=FF79C6&text_color=E6EDF3&custom_title=Most+Used+Languages&card_width=495"/>
 
 </div>
 
