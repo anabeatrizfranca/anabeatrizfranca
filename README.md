@@ -2,8 +2,6 @@
   <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=6000&pause=1000&color=FF79C6&center=true&vCenter=true&width=600&lines=Ana+Beatriz" />
 </p>
 
----
-
 ### 🛠️ Languages & Technologies
 
 <p align="left">
@@ -42,13 +40,10 @@
   <a href="https://www.linkedin.com/in/ana-beatriz-franca">
     <img src="https://img.shields.io/badge/LinkedIn-6CA6D9?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
-  <a href="mailto:anafrajor@gmail.com">
-    <img src="https://img.shields.io/badge/Email-FF79C6?style=for-the-badge&logo=gmail&logoColor=white"/>
+   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anafrajor@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Gmail-FF79C6?style=for-the-badge&logo=gmail&logoColor=white"/>
   </a>
-</p>
-
----
-
-<p align="center">
-  <i>✨ Always learning, always building, always growing.</i>
+   <a href="https://www.instagram.com/anabeatrizfrajor/" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+  </a>
 </p>
