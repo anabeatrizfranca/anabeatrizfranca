@@ -320,22 +320,3 @@ footer{flex-direction:column;gap:8px}
 .cv-option:hover{border-color:var(--pink);transform:translateY(-2px);background:var(--bg-elevated-2)}
 .cv-option span{flex:1}
 .cv-option em{font-style:normal;color:var(--pink);font-size:.75rem;font-weight:700}
-
-.project-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 18px;
-    background: #c5dfc5;
-    border-radius: 12px 0 0 12px;
-    font-size: 16px;
-    color: #252525;
-}
-
-.project-tag img {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-}
