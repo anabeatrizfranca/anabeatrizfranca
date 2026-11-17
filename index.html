@@ -1,1006 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Ana Beatriz — Software Development student, researcher, builder and curious learner."
-    >
-
-    <title>Ana Beatriz — Software Development</title>
-
-    <meta property="og:title" content="Ana Beatriz — Software Development">
-    <meta property="og:description" content="Software Development student, researcher, builder and curious learner.">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <link rel="stylesheet" href="style.css">
-
-    <script>
-        (function () {
-            try {
-                if (localStorage.getItem('ab-portfolio-theme') === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                }
-            } catch (e) {}
-        })();
-    </script>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ana Beatriz — Software Development student, researcher, builder and curious learner.">
+<title>Ana Beatriz — Software Development</title>
+<meta property="og:title" content="Ana Beatriz — Software Development">
+<meta property="og:description" content="Software Development student, researcher, builder and curious learner.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+<script>
+(function () {
+    try {
+        if (localStorage.getItem('ab-portfolio-theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    } catch (e) {}
+})();
+</script>
 </head>
-
-
 <body>
 
-
-<!-- Ambient background glows: fixed, behind all content -->
 <div class="ambient" aria-hidden="true">
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
     <div class="ambient-glow glow-3"></div>
 </div>
 
-
 <!-- ================= NAVIGATION ================= -->
-
 <header class="navbar">
-
-    <a href="#home" class="logo">
-        AB<span>.</span>
-    </a>
-
+    <a href="#home" class="logo">AB<span>.</span></a>
 
     <nav class="nav-links">
-
-        <a href="#highlights">Highlights</a>
-
-        <a href="#about">About</a>
-
-        <a href="#projects">Projects</a>
-
-        <a href="#research">Research</a>
-
+        <a href="#achievements">Achievements</a>
         <a href="#skills">Skills</a>
-
+        <a href="#education">Education</a>
         <a href="#beyond">Beyond Code</a>
-
-        <a href="#curriculum">Curriculum</a>
-
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
     </nav>
 
-
     <div class="nav-actions">
-
-        <a
-            href="assets/Ana-Beatriz-CV.pdf"
-            class="nav-resume"
-            download
-        >
-            Resume <span>↓</span>
-        </a>
-
-        <button
-            class="nav-cta"
-            id="openTalk"
-            type="button"
-        >
-            Let's talk <span>↗</span>
+        <a href="assets/Ana-Beatriz-CV.pdf" class="nav-resume" download>Resume <span>↓</span></a>
+        <button class="nav-cta" id="openTalk" type="button">Let's talk <span>↗</span></button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
 
-        <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Switch to dark mode"
-        >
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-            </svg>
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </button>
-
-    </div>
-
-
-    <button
-        class="menu-button"
-        id="menuButton"
-        aria-label="Open menu"
-        aria-expanded="false"
-    >
-        ☰
-    </button>
-
-</header>
-
-
-<!-- ================= MOBILE MENU ================= -->
-
-<nav class="mobile-menu" id="mobileMenu">
-
-    <a href="#highlights">Highlights</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#research">Research</a>
-    <a href="#skills">Skills</a>
-    <a href="#beyond">Beyond Code</a>
-    <a href="#curriculum">Curriculum</a>
-    <a href="#contact">Contact</a>
-    <a href="assets/Ana-Beatriz-CV.pdf" download>Resume ↓</a>
-
-    <button
-        class="mobile-theme-toggle"
-        id="mobileThemeToggle"
-        type="button"
-    >
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"></circle>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-        </svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-        <span class="toggle-label">Switch to dark mode</span>
-    </button>
-
-</nav>
-
-
-<main>
-
-
-<!-- ================= HERO ================= -->
-
-<section id="home" class="hero">
-
-    <div class="hero-visual">
-
-        <div class="decorative-ring ring-yellow float"></div>
-
-        <div class="decorative-ring ring-blue float float-delay"></div>
-
-        <span class="dot dot-pink float"></span>
-
-
-        <div class="profile-image">
-
-            <img
-                src="assets/profile.png"
-                alt="Portrait of Ana Beatriz"
-            >
-
+        <div class="lang-switch" id="langSwitch">
+            <button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span id="langCurrent">EN</span>
+            </button>
+            <ul class="lang-menu" id="langMenu">
+                <li><button type="button" data-lang="pt">Português</button></li>
+                <li><button type="button" data-lang="en">English</button></li>
+                <li><button type="button" data-lang="es">Español</button></li>
+            </ul>
         </div>
 
     </div>
 
+    <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<nav class="mobile-menu" id="mobileMenu">
+    <a href="#achievements">Achievements</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#beyond">Beyond Code</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/Ana-Beatriz-CV.pdf" download>Resume ↓</a>
+
+    <button class="mobile-theme-toggle" id="mobileThemeToggle" type="button">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <span class="toggle-label">Switch to dark mode</span>
+    </button>
+
+    <div class="mobile-lang">
+        <button type="button" data-lang="pt">PT</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+    </div>
+</nav>
+
+<main>
+
+<!-- ================= HERO + ABOUT ================= -->
+<section id="home" class="hero">
+
+    <div class="hero-visual">
+        <div class="decorative-ring ring-yellow float"></div>
+        <div class="decorative-ring ring-blue float float-delay"></div>
+        <span class="dot dot-pink float"></span>
+        <div class="profile-image">
+            <img src="assets/profile.png" alt="Portrait of Ana Beatriz">
+        </div>
+    </div>
 
     <div class="hero-content">
-
         <span class="eyebrow reveal-chars" aria-label="HELLO, I'M">
-            <span aria-hidden="true">HELLO, I'M</span>
+            <span aria-hidden="true" data-i18n-html="heroEyebrow">HELLO, I'M</span>
         </span>
-
 
         <h1 class="reveal-chars" aria-label="Ana Beatriz.">
             <span aria-hidden="true">Ana Beatriz<span class="accent">.</span></span>
         </h1>
 
-
-        <p class="hero-description fade-up">
-
-            Software development student, curious builder,
-            researcher and lifelong learner exploring
-            technology, people and meaningful ideas.
-
-        </p>
-
+        <div class="hero-about fade-up" id="about">
+            <p class="lead">
+                My interests lie at the intersection of technology, people and purpose.
+            </p>
+            <p>
+                Especially Human-Computer Interaction, impactful software and the ways
+                technology can improve real experiences. I enjoy learning independently,
+                experimenting with ideas and turning what I learn into something tangible.
+            </p>
+        </div>
 
         <div class="hero-buttons fade-up">
-
-            <a
-                href="#projects"
-                class="button button-primary"
-            >
-                Explore my work
-                <span>↓</span>
-            </a>
-
-            <a
-                href="assets/Ana-Beatriz-CV.pdf"
-                class="button button-secondary"
-                download
-            >
-                Download CV
-                <span>↓</span>
-            </a>
-
+            <a href="#achievements" class="button button-primary">Explore my work <span>↓</span></a>
+            <a href="assets/Ana-Beatriz-CV.pdf" class="button button-secondary" download>Download CV <span>↓</span></a>
         </div>
-
 
         <div class="currently fade-up">
-
             <span class="status-dot"></span>
-
             <div>
-
-                <small>
-                    Currently
-                </small>
-
-                <p>
-                    Building, learning &amp; exploring
-                </p>
-
+                <small>Currently</small>
+                <p>Building, learning &amp; exploring</p>
             </div>
-
         </div>
-
     </div>
 
 </section>
 
 
+<!-- ================= ACHIEVEMENTS (horizontal timeline) ================= -->
+<section id="achievements" class="section">
 
-<!-- ================= HIGHLIGHTS ================= -->
-
-<section
-    id="highlights"
-    class="section highlights-section"
->
-
-    <div class="section-label fade-up">
-
-        <span>01</span>
-
-        HIGHLIGHTS
-
-    </div>
-
-    <div class="highlights-grid stagger">
-
-
-        <article class="highlight-card">
-
-            <div class="highlight-card-logo">
-                <img src="assets/wspelogo.png" alt="" loading="lazy">
-            </div>
-
-            <span class="highlight-date">Two-time competitor</span>
-
-            <h3>WorldSkills Brazil — Pernambuco</h3>
-
-            <p>
-                I competed twice at the state level in the WorldSkills 
-                Brazil Pernambuco competition as a mobile developer, 
-                winning 2nd place both times.
-            </p>
-
-        </article>
-
-
-        <article class="highlight-card">
-
-            <div class="highlight-card-logo">
-                <img src="assets/startuplogo2.png" alt="" loading="lazy">
-            </div>
-
-            <span class="highlight-date">Award winner</span>
-
-            <h3>Start-Up Competition</h3>
-
-            <p>
-                I was awarded 1st place in my category
-                at the 2023 SENAI Innovation Grand Prix 
-                for developing and presenting an entrepreneurial 
-                project. The competition brought together 8,894 
-                students and 1,902 teams from across Brazil.
-            </p>
-
-        </article>
-
-
-        <article class="highlight-card">
-
-            <div class="highlight-card-logo">
-                <img src="assets/ssrn.png" alt="" loading="lazy">
-            </div>
-
-            <span class="highlight-date">Published, 2026</span>
-
-            <h3>Researcher, SSRN</h3>
-
-            <p>
-                Authored a paper on AI and immediate-reward
-                culture reshaping the modern workforce.
-            </p>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= ABOUT ================= -->
-
-<section
-    id="about"
-    class="section about-section"
->
-
-    <div class="section-label fade-up">
-
-        <span>02</span>
-
-        ABOUT
-
-    </div>
-
-
-    <div class="about-grid">
-
-        <h2 class="reveal-chars" aria-label="More than just code.">
-
-            <span aria-hidden="true">
-                More than
-                <br>
-                <span class="accent">just code.</span>
-            </span>
-
-        </h2>
-
-
-        <div class="about-content">
-
-            <p class="large-text fade-up">
-
-                I'm interested in technology not only as
-                something to build, but as a way to create
-                meaningful impact.
-
-            </p>
-
-
-            <p class="fade-up">
-
-                My interests lie at the intersection of
-                technology, people and purpose — especially
-                Human-Computer Interaction, impactful
-                software and the ways technology can improve
-                real experiences.
-
-            </p>
-
-
-            <p class="fade-up">
-
-                I'm particularly curious about software
-                designed with purpose: technology that is
-                useful, thoughtful and capable of creating
-                positive real-world impact.
-
-            </p>
-
-
-            <p class="fade-up">
-
-                I enjoy learning independently, experimenting
-                with ideas and turning what I learn into
-                something tangible.
-
-            </p>
-
+    <div class="section-head fade-up">
+        <div class="section-label"><span>01</span><b>ACHIEVEMENTS</b></div>
+        <div class="timeline-nav">
+            <button type="button" class="timeline-arrow" id="tlPrev" aria-label="Previous achievement">←</button>
+            <button type="button" class="timeline-arrow" id="tlNext" aria-label="Next achievement">→</button>
         </div>
-
     </div>
 
-</section>
+    <div class="timeline stagger">
 
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section
-    id="projects"
-    class="section projects-section"
->
-
-    <div class="section-label fade-up">
-
-        <span>03</span>
-
-        SELECTED PROJECTS
-
-    </div>
-
-
-    <div class="projects-list stagger">
-
-
-        <article class="project">
-
-            <span class="project-number">
-                01
-            </span>
-
-
-            <div class="project-info">
-
-                <p class="project-kicker">
-                    DIGITAL PLATFORM · NGO
-                </p>
-
-                <h3>
-                    KİMCANKO International Rescue
-                    Partnership Platform
-                </h3>
-
-
-                <p>
-
-                    Developed a digital platform for
-                    KİMCANKO, a Turkey-based animal rescue
-                    NGO, focused on supporting international
-                    partnerships and increasing visibility
-                    for rescued animals and adoption
-                    initiatives.
-
-                </p>
-
-
-                <p>
-
-                    Contributed to the platform's structure,
-                    responsive interface development and
-                    user experience organization. The project
-                    includes animal profile pages, filtering
-                    systems, media galleries and
-                    adoption/logistics information.
-
-                </p>
-
-
-                <div class="tech-tags">
-
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>GitHub Pages</span>
-                    <span>Git/GitHub</span>
-
+        <article class="timeline-item">
+        <div class="timeline-card">
+            <div class="timeline-head">
+                <div class="timeline-logo"><img src="assets/wspelogo.png" alt="" loading="lazy"></div>
+                <div>
+                    <small>Two-time competitor</small>
+                    <h3>WorldSkills Brazil — Pernambuco</h3>
                 </div>
-
             </div>
-
-
-            <a
-                href="https://partners.kimcanko.org"
-                class="project-link"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View project ↗
-            </a>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= RESEARCH ================= -->
-
-<section
-    id="research"
-    class="section research-section"
->
-
-    <div class="section-label fade-up">
-
-        <span>04</span>
-
-        RESEARCH
-
-    </div>
-
-
-    <div class="research-intro">
-
-        <div>
-
-            <h2 class="reveal-chars" aria-label="Research">
-                <span aria-hidden="true">Research</span>
-            </h2>
-
-            <p class="research-tagline fade-up">
-                Curiosity drives the work.
+            <p>
+                I competed twice at the state level in the WorldSkills Brazil Pernambuco
+                competition as a mobile developer, winning 2nd place both times.
             </p>
 
-        </div>
-
-
-        <p class="fade-up">
-
-            A collection of questions, ideas and research
-            exploring technology, people, work and the
-            ways these areas intersect.
-
-        </p>
-
-    </div>
-
-
-    <div class="research-meta fade-up">
-
-        <a
-            class="research-meta-item"
-            href="https://scholar.google.com/citations?pli=1&authuser=1&user=o1WYJUQAAAAJ"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <span class="meta-icon">
-                <img src="assets/scholars.png" alt="" loading="lazy">
-            </span>
-
-            <div>
-                <small>My Google Scholar profile</small>
-                <p>View profile ↗</p>
-            </div>
-        </a>
-
-
-        <div class="research-meta-item">
-
-            <span class="meta-icon">
-                <img src="assets/ssrn.png" alt="" loading="lazy">
-            </span>
-
-            <div>
-                <small>Published at</small>
-                <p>SSRN</p>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="research-list stagger">
-
-
-        <article class="research-item">
-
-            <span class="research-number">
-                01
-            </span>
-
-
-            <div class="research-content">
-
-                <p class="research-kicker">
-                    PAPER · ARTIFICIAL INTELLIGENCE · WORK
-                </p>
-
-
-                <h3>
-
-                    Quantity vs. Quality:
-                    How Artificial Intelligence and
-                    Immediate-Reward Culture are
-                    Reshaping the Workforce
-
-                </h3>
-
-
-                <p>
-
-                    This paper examines how artificial
-                    intelligence and immediate-reward
-                    culture are reshaping the modern
-                    workforce.
-
-                </p>
-
-
-                <p>
-
-                    Drawing on literature from psychology,
-                    neuroscience, organizational behavior
-                    and labor economics, the study explores
-                    how speed, instant gratification and
-                    short-term results influence motivation,
-                    learning and career development.
-
-                </p>
-
-
-                <p>
-
-                    The research also examines purpose-driven
-                    careers, skills-based hiring, signaling
-                    theory and the distinction between deep
-                    and surface learning.
-
-                </p>
-
-
-                <div class="research-links">
-
-                    <a
-                        href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6960139"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Read publication ↗
-                    </a>
-
+            <div class="photo-carousel" data-carousel>
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="assets/wspe.png" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/wspe1.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/wspe2.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/wspe3.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/wspe4.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
                 </div>
-
+                <button class="carousel-btn prev" data-carousel-prev aria-label="Previous photo">←</button>
+                <button class="carousel-btn next" data-carousel-next aria-label="Next photo">→</button>
+                <div class="carousel-dots" data-carousel-dots></div>
             </div>
+        </div>
+        </article>
 
+        <article class="timeline-item">
+        <div class="timeline-card">
+            <div class="timeline-head">
+                <div class="timeline-logo"><img src="assets/startuplogo2.png" alt="" loading="lazy"></div>
+                <div>
+                    <small>Award winner · 2023</small>
+                    <h3>Start-Up Competition</h3>
+                </div>
+            </div>
+            <p>
+                I was awarded 1st place in my category at the 2023 SENAI Innovation Grand Prix
+                for developing and presenting an entrepreneurial project. The competition brought
+                together 8,894 students and 1,902 teams from across Brazil.
+            </p>
 
-            <span class="research-arrow">
-                ↗
-            </span>
+            <div class="photo-carousel" data-carousel>
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="assets/startuplogo.png" alt="Start-Up competition logo" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/startup1.jpeg" alt="Start-Up competition" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/startup2.jpeg" alt="Start-Up competition" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/startup3.png" alt="Start-Up competition" loading="lazy"></div>
+                </div>
+                <button class="carousel-btn prev" data-carousel-prev aria-label="Previous photo">←</button>
+                <button class="carousel-btn next" data-carousel-next aria-label="Next photo">→</button>
+                <div class="carousel-dots" data-carousel-dots></div>
+            </div>
+        </div>
+        </article>
 
+        <article class="timeline-item">
+        <div class="timeline-card">
+            <div class="timeline-head">
+                <div class="timeline-logo"><img src="assets/logo%20demoday.png" alt="" loading="lazy"></div>
+                <div>
+                    <small>Porto Digital · Demo Day</small>
+                    <h3>Technology Residency</h3>
+                </div>
+            </div>
+            <p>
+                During the Porto Digital Technology Residency, I developed a solution focused on
+                inclusion through technology: a mobile app that helps visually impaired people
+                navigate indoor environments through voice commands and audio-guided mapping.
+                We presented it at Hack and Play, one of the biggest technology events in Brazil,
+                and I delivered the project pitch at Demo Day.
+            </p>
+
+            <div class="photo-carousel" data-carousel>
+                <div class="carousel-track">
+                    <div class="carousel-slide"><img src="assets/demoday1.png" alt="Technology Residency Demo Day" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/demoday2.png" alt="Technology Residency Demo Day" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/demoday3.png" alt="Technology Residency Demo Day" loading="lazy"></div>
+                    <div class="carousel-slide"><img src="assets/demoday4.png" alt="Technology Residency Demo Day" loading="lazy"></div>
+                </div>
+                <button class="carousel-btn prev" data-carousel-prev aria-label="Previous photo">←</button>
+                <button class="carousel-btn next" data-carousel-next aria-label="Next photo">→</button>
+                <div class="carousel-dots" data-carousel-dots></div>
+            </div>
+        </div>
+        </article>
+
+        <article class="timeline-item">
+        <div class="timeline-card">
+            <div class="timeline-head">
+                <div class="timeline-logo"><img src="assets/lala.png" alt="" loading="lazy"></div>
+                <div>
+                    <small>Leadership · LALA</small>
+                    <h3>Selected to be a LALA Leader</h3>
+                </div>
+            </div>
+            <p>
+                I was selected from a large pool of applicants for the Latin American Leadership
+                Academy (LALA) leadership camp, after an application process with interviews and
+                multiple stages that recognized my leadership potential. LALA is a non-profit
+                organization that finds, develops and connects young leaders across Latin America
+                to help them tackle the region's biggest challenges.
+            </p>
+
+            <div class="photo-carousel photo-single">
+                <img src="assets/lala1.png" alt="LALA leadership camp" loading="lazy">
+            </div>
+        </div>
         </article>
 
     </div>
 
 </section>
-
 
 
 <!-- ================= SKILLS ================= -->
+<section id="skills" class="section alt">
 
-<section
-    id="skills"
-    class="section skills-section"
->
+    <div class="section-label fade-up"><span>02</span><b>SKILLS &amp; TECHNOLOGIES</b></div>
 
-    <div class="section-label fade-up">
-
-        <span>05</span>
-
-        SKILLS &amp; TECHNOLOGIES
-
-    </div>
-
-
-    <div class="skills-grid stagger">
-
+    <div class="skills-row stagger">
 
         <div class="skill-category">
-
-            <h3>
-                Development
-            </h3>
-
+            <h3>Development</h3>
             <div class="skill-list">
-
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Python</span>
-
+                <span><img src="assets/HTML.png" alt="" loading="lazy">HTML</span>
+                <span><img src="assets/CSS.png" alt="" loading="lazy">CSS</span>
+                <span><img src="assets/JavaScript.png" alt="" loading="lazy">JavaScript</span>
+                <span><img src="assets/Python.png" alt="" loading="lazy">Python</span>
+                <span><img src="assets/C.png" alt="" loading="lazy">C</span>
+                <span><img src="assets/Kotlin.png" alt="" loading="lazy">Kotlin</span>
             </div>
-
         </div>
-
 
         <div class="skill-category">
-
-            <h3>
-                Frameworks &amp; Libraries
-            </h3>
-
+            <h3>Frameworks &amp; Libraries</h3>
             <div class="skill-list">
-
-                <span>React</span>
-
+                <span><img src="assets/React.png" alt="" loading="lazy">React</span>
             </div>
-
         </div>
-
 
         <div class="skill-category">
-
-            <h3>
-                Tools
-            </h3>
-
+            <h3>Tools</h3>
             <div class="skill-list">
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Figma</span>
-                <span>Photoshop</span>
-                <span>Canva</span>
-
+                <span><img src="assets/Git.png" alt="" loading="lazy">Git</span>
+                <span><img src="assets/GitHub.png" alt="" loading="lazy">GitHub</span>
+                <span><img src="assets/Figma.png" alt="" loading="lazy">Figma</span>
+                <span><img src="assets/Photoshop.png" alt="" loading="lazy">Photoshop</span>
+                <span><img src="assets/Canva.png" alt="" loading="lazy">Canva</span>
             </div>
-
         </div>
+
+        <a class="github-link" href="https://github.com/anabeatrizfranca" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.08 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+            View my GitHub ↗
+        </a>
 
     </div>
 
 </section>
 
 
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="section">
 
-<!-- ================= BEYOND CODE ================= -->
+    <div class="section-label fade-up"><span>03</span><b>EDUCATION</b></div>
 
-<section
-    id="beyond"
-    class="section beyond-section"
->
+    <div class="education-grid stagger">
 
-    <div class="section-label fade-up">
+        <article class="education-card">
+            <span>CURRENT</span>
+            <h3>System Analysis and Development</h3>
+            <p class="logo-line"><span class="mini-logo"><img src="assets/cesar.png" alt="" loading="lazy"></span>CESAR School</p>
+            <small>Undergraduate degree · Aug 2026 – Dec 2028</small>
+        </article>
 
-        <span>06</span>
-
-        BEYOND CODE
+        <article class="education-card">
+            <span>CERTIFICATES</span>
+            <h3 class="logo-line"><span class="mini-logo"><img src="assets/certificates.png" alt="" loading="lazy"></span>Courses &amp; Certifications</h3>
+            <p class="education-description">
+                A collection of courses, certifications and independent learning experiences.
+            </p>
+            <a href="courses.html" class="courses-button">View courses ↗</a>
+        </article>
 
     </div>
 
+</section>
 
-    <div class="beyond-intro">
 
+<!-- ================= BEYOND CODE: VOLUNTEERING + LANGUAGES ================= -->
+<section id="beyond" class="section alt">
+
+    <div class="section-label fade-up"><span>04</span><b>BEYOND CODE</b></div>
+
+    <div class="duo">
+
+        <!-- VOLUNTEERING -->
         <div>
+            <div class="sub-heading fade-up"><span>01</span><h3>Volunteering</h3></div>
 
-            <h2 class="reveal-chars" aria-label="There's a lot beyond the screen.">
+            <div class="beyond-cards stagger">
 
-                <span aria-hidden="true">
-                    There's a lot
-                    <br>
-                    <span class="accent">beyond the screen.</span>
-                </span>
+                <article class="beyond-card">
+                    <div class="beyond-card-head">
+                        <div class="beyond-card-logo"><img src="assets/kimcankologo.png" alt="" loading="lazy"></div>
+                        <div><span>TURKEY</span><h3>KİMCANKO</h3></div>
+                    </div>
+                    <p>
+                        Volunteer work supporting an international animal rescue NGO, contributing
+                        to digital initiatives, communication and tools that support international
+                        partnerships.
+                    </p>
+                    <a href="https://partners.kimcanko.org/tire" target="_blank" rel="noopener noreferrer" class="card-link">Visit project ↗</a>
+                </article>
 
-            </h2>
+                <article class="beyond-card">
+                    <div class="beyond-card-head">
+                        <div class="beyond-card-logo"><img src="assets/cidologo.png" alt="" loading="lazy"></div>
+                        <div><span>RWANDA</span><h3>CIDO</h3></div>
+                    </div>
+                    <p>
+                        Volunteer work with CIDO, an African organization in Rwanda, contributing
+                        to initiatives connected to community, education and social impact.
+                    </p>
+                </article>
 
+            </div>
         </div>
 
+        <!-- LANGUAGES -->
+        <div>
+            <div class="sub-heading fade-up"><span>02</span><h3>Learning Beyond Borders</h3></div>
 
-        <p class="fade-up">
+            <div class="language-content">
 
-            Technology is only one part of my story.
-            The people, languages, communities and
-            experiences I encounter shape the way I learn,
-            build and think.
-
-        </p>
-
-    </div>
-
-
-
-    <!-- VOLUNTEERING -->
-
-    <div class="beyond-subsection">
-
-        <div class="beyond-heading fade-up">
-
-            <span>01</span>
-
-            <h3>
-                Volunteering
-            </h3>
-
-        </div>
-
-
-        <div class="beyond-cards stagger">
-
-
-            <article class="beyond-card">
-
-                <div class="beyond-card-logo">
-                    <img src="assets/kimcankologo.png" alt="" loading="lazy">
-                </div>
-
-                <span>
-                    TURKEY
-                </span>
-
-                <h3>
-                    KİMCANKO
-                </h3>
-
-                <p>
-
-                    Volunteer work supporting an
-                    international animal rescue NGO,
-                    contributing to digital initiatives,
-                    communication and tools that support
-                    international partnerships.
-
+                <p class="fade-up">
+                    Learning languages is one of the ways I challenge myself to understand
+                    different cultures, perspectives and ways of communicating.
                 </p>
 
-                <a
-                    href="https://partners.kimcanko.org/tire"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="card-link"
-                >
-                    Visit project ↗
-                </a>
-
-            </article>
-
-
-            <article class="beyond-card">
-
-                <div class="beyond-card-logo">
-                    <img src="assets/cidologo.png" alt="" loading="lazy">
-                </div>
-
-                <span>
-                    RWANDA
-                </span>
-
-                <h3>
-                    CIDO
-                </h3>
-
-                <p>
-
-                    Volunteer work with CIDO, an African
-                    organization in Rwanda, contributing
-                    to initiatives connected to community,
-                    education and social impact.
-
+                <p class="fade-up" data-i18n-html="langPara">
+                    I received a Santander Academy scholarship and am currently studying Spanish
+                    through Open Mundo. I also participated in an
+                    <span class="badge-inline"><img src="assets/obli.png" alt="" loading="lazy">OBLI</span>
+                    English language competition and the
+                    <span class="badge-inline"><img src="assets/hcgeclogo.png" alt="" loading="lazy">Harvard Crimson Global Essay Competition</span>,
+                    experiences that helped me develop my English communication and writing.
                 </p>
 
-            </article>
+                <div class="language-progress-block">
+                    <p class="language-progress-title">Languages I speak</p>
 
-        </div>
-
-    </div>
-
-
-
-    <!-- LANGUAGES -->
-
-    <div class="beyond-subsection">
-
-        <div class="beyond-heading fade-up">
-
-            <span>02</span>
-
-            <h3>
-                Languages
-            </h3>
-
-        </div>
-
-
-        <div class="language-content">
-
-            <h3 class="fade-up">
-                Learning beyond borders.
-            </h3>
-
-
-            <p class="fade-up">
-
-                Learning languages is one of the ways I
-                challenge myself to understand different
-                cultures, perspectives and ways of
-                communicating.
-
-            </p>
-
-
-            <p class="fade-up">
-
-                I received a Santander Academy scholarship
-                and am currently studying Spanish through
-                Open Mundo. I also participated in an
-                <span class="badge-inline">
-                    <img src="assets/obli.png" alt="" loading="lazy">
-                    OBLI
-                </span>
-                English language competition and the
-                <span class="badge-inline">
-                    <img src="assets/hcgeclogo.png" alt="" loading="lazy">
-                    Harvard Crimson Global Essay Competition
-                </span>,
-                experiences that helped me develop my English
-                communication and writing.
-
-            </p>
-
-
-            <p class="fade-up">
-
-                Spanish is only one chapter. I hope to keep
-                learning new languages throughout the years.
-
-            </p>
-
-
-            <div class="language-progress-block">
-
-                <p class="language-progress-title">
-                    Languages I speak
-                </p>
-
-
-                <div class="language-item">
-
-                    <span class="flag" aria-hidden="true">🇧🇷</span>
-
-                    <div class="language-bar-wrap">
-
-                        <div class="language-bar-label">
-                            <span>Portuguese</span>
-                            <span>Native</span>
+                    <div class="language-item">
+                        <img class="flag" src="assets/portuguese.png" alt="" loading="lazy">
+                        <div class="language-bar-wrap">
+                            <div class="language-bar-label"><span>Portuguese</span><span>Native</span></div>
+                            <div class="language-bar"><div class="language-bar-fill" style="width: 100%;"></div></div>
                         </div>
-
-                        <div class="language-bar">
-                            <div class="language-bar-fill" style="width: 100%;"></div>
-                        </div>
-
                     </div>
 
-                </div>
-
-
-                <div class="language-item">
-
-                    <span class="flag" aria-hidden="true">🇺🇸</span>
-
-                    <div class="language-bar-wrap">
-
-                        <div class="language-bar-label">
-                            <span>English</span>
-                            <span>Fluent</span>
+                    <div class="language-item">
+                        <img class="flag" src="assets/english.png" alt="" loading="lazy">
+                        <div class="language-bar-wrap">
+                            <div class="language-bar-label"><span>English</span><span>Fluent</span></div>
+                            <div class="language-bar"><div class="language-bar-fill" style="width: 100%;"></div></div>
                         </div>
-
-                        <div class="language-bar">
-                            <div class="language-bar-fill" style="width: 100%;"></div>
-                        </div>
-
                     </div>
 
-                </div>
-
-
-                <div class="language-item">
-
-                    <span class="flag" aria-hidden="true">🇪🇸</span>
-
-                    <div class="language-bar-wrap">
-
-                        <div class="language-bar-label">
-                            <span>Spanish</span>
-                            <span>Basic</span>
+                    <div class="language-item">
+                        <img class="flag" src="assets/spanish.png" alt="" loading="lazy">
+                        <div class="language-bar-wrap">
+                            <div class="language-bar-label"><span>Spanish</span><span>Basic</span></div>
+                            <div class="language-bar"><div class="language-bar-fill" style="width: 25%;"></div></div>
                         </div>
-
-                        <div class="language-bar">
-                            <div class="language-bar-fill" style="width: 25%;"></div>
-                        </div>
-
                     </div>
 
+                    <div class="language-item">
+                        <img class="flag" src="assets/french.png" alt="" loading="lazy">
+                        <div class="language-bar-wrap">
+                            <div class="language-bar-label"><span>French</span><span>Basic</span></div>
+                            <div class="language-bar"><div class="language-bar-fill" style="width: 20%;"></div></div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-
         </div>
 
     </div>
@@ -1008,376 +449,164 @@
 </section>
 
 
+<!-- ================= RESEARCH + SELECTED PROJECTS ================= -->
+<section id="research" class="section">
 
-<!-- ================= CURRICULUM ================= -->
+    <div class="section-label fade-up"><span>05</span><b>RESEARCH &amp; PROJECTS</b></div>
 
-<section
-    id="curriculum"
-    class="section curriculum-section"
->
+    <div class="duo">
 
-    <div class="section-label fade-up">
+        <!-- RESEARCH -->
+        <div>
+            <div class="sub-heading fade-up"><span>01</span><h3>Research</h3></div>
+            <p class="research-tagline fade-up">Curiosity drives the work.</p>
 
-        <span>07</span>
-
-        CURRICULUM
-
-    </div>
-
-
-
-    <!-- EDUCATION -->
-
-    <div class="curriculum-subsection">
-
-        <div class="beyond-heading fade-up">
-
-            <span>01</span>
-
-            <h3>
-                Education
-            </h3>
-
-        </div>
-
-
-        <div class="education-grid stagger">
-
-
-            <article class="education-card">
-
-                <span>
-                    CURRENT
-                </span>
-
-                <h3>
-                    System Analysis and Development
-                </h3>
-
-                <p>
-                    CESAR School
-                </p>
-
-                <small>
-                    Undergraduate degree · Aug 2026 – Dec 2028
-                </small>
-
-            </article>
-
-
-            <article class="education-card">
-
-                <span>
-                    CERTIFICATES
-                </span>
-
-                <h3>
-                    Courses &amp; Certifications
-                </h3>
-
-                <p class="education-description">
-
-                    A collection of courses, certifications
-                    and independent learning experiences.
-
-                </p>
-
-
-                <a
-                    href="courses.html"
-                    class="courses-button"
-                >
-                    View courses ↗
+            <div class="research-meta fade-up">
+                <a class="research-meta-item" href="https://scholar.google.com/citations?pli=1&authuser=1&user=o1WYJUQAAAAJ" target="_blank" rel="noopener noreferrer">
+                    <span class="meta-icon"><img src="assets/scholars.png" alt="" loading="lazy"></span>
+                    <div><small>My Google Scholar profile</small><p>View profile ↗</p></div>
                 </a>
+                <div class="research-meta-item">
+                    <span class="meta-icon"><img src="assets/ssrn.png" alt="" loading="lazy"></span>
+                    <div><small>Published at</small><p>SSRN · 2026</p></div>
+                </div>
+            </div>
 
+            <article class="media-card fade-up">
+                <img class="media-img" src="assets/research.png" alt="Research paper" loading="lazy">
+                <div>
+                    <p class="research-kicker">PAPER · ARTIFICIAL INTELLIGENCE · WORK</p>
+                    <h3>Quantity vs. Quality: How Artificial Intelligence and Immediate-Reward Culture are Reshaping the Workforce</h3>
+                    <p>
+                        This paper examines how artificial intelligence and immediate-reward culture are
+                        reshaping the modern workforce. Drawing on psychology, neuroscience, organizational
+                        behavior and labor economics, it explores how speed, instant gratification and
+                        short-term results influence motivation, learning and career development.
+                    </p>
+                    <p>
+                        It also examines purpose-driven careers, skills-based hiring, signaling theory and
+                        the distinction between deep and surface learning.
+                    </p>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6960139" target="_blank" rel="noopener noreferrer" class="card-link">Read publication ↗</a>
+                </div>
             </article>
-
         </div>
 
-    </div>
+        <!-- SELECTED PROJECTS -->
+        <div id="projects">
+            <div class="sub-heading fade-up"><span>02</span><h3>Selected Projects</h3></div>
 
-
-
-    <!-- ACHIEVEMENTS -->
-
-    <div class="curriculum-subsection">
-
-        <div class="beyond-heading fade-up">
-
-            <span>02</span>
-
-            <h3>
-                Achievements
-            </h3>
-
-        </div>
-
-
-        <div class="achievement-list stagger">
-
-
-            <article class="achievement-item">
-
-                <span>01</span>
-
+            <article class="media-card fade-up">
+                <img class="media-img" src="assets/cop31.png" alt="Where are the dogs website" loading="lazy">
                 <div>
-
-                    <small>
-                        WORLDSKILLS BRAZIL
-                    </small>
-
-                    <h3>
-                        WorldSkills Brazil —
-                        Pernambuco
-                    </h3>
-
+                    <p class="research-kicker">WEBSITE · COP31 · NGO</p>
+                    <h3>“Where are the dogs?”</h3>
                     <p>
-
-                        I competed twice at the state level in the 
-                        WorldSkills Brazil Pernambuco competition as a 
-                        mobile developer, winning 2nd place both times.
-
+                        A website developed for COP31 in Türkiye to support KİMCANKO's mission,
+                        raising awareness for animal rescue and welfare during the event.
                     </p>
-
-
-                    <div class="photo-carousel" data-carousel>
-
-                        <div class="carousel-track">
-                            <div class="carousel-slide"><img src="assets/wspe.png" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
-                            <div class="carousel-slide"><img src="assets/wspe1.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
-                            <div class="carousel-slide"><img src="assets/wspe2.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
-                            <div class="carousel-slide"><img src="assets/wspe3.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
-                            <div class="carousel-slide"><img src="assets/wspe4.jpeg" alt="WorldSkills Brazil Pernambuco competition" loading="lazy"></div>
-                        </div>
-
-                        <button class="carousel-btn prev" data-carousel-prev aria-label="Previous photo">←</button>
-                        <button class="carousel-btn next" data-carousel-next aria-label="Next photo">→</button>
-
-                        <div class="carousel-dots" data-carousel-dots></div>
-
-                    </div>
-
+                    <div class="tech-tags"><span><img src="assets/HTML.png" alt="" loading="lazy">HTML</span><span><img src="assets/CSS.png" alt="" loading="lazy">CSS</span><span><img src="assets/JavaScript.png" alt="" loading="lazy">JavaScript</span><span><img src="assets/GitHub.png" alt="" loading="lazy">GitHub Pages</span><span><img src="assets/Git.png" alt="" loading="lazy">Git</span><span><img src="assets/GitHub.png" alt="" loading="lazy">GitHub</span></div>
+                    <!-- TODO: replace # with the project link -->
+                    <a href="#" class="card-link">View project ↗</a>
                 </div>
-
             </article>
 
-
-            <article class="achievement-item">
-
-                <span>02</span>
-
+            <article class="media-card fade-up">
+                <img class="media-img" src="assets/kimcanko.png" alt="KİMCANKO partnership platform" loading="lazy">
                 <div>
-
-                    <small>
-                        START-UP
-                    </small>
-
-                    <h3>
-                        Start-Up Competition
-                    </h3>
-
+                    <p class="research-kicker">DIGITAL PLATFORM · NGO</p>
+                    <h3>KİMCANKO International Rescue Partnership Platform</h3>
                     <p>
-
-                        Awarded in a Start-Up competition
-                        for the development and presentation
-                        of an entrepreneurial project.
-
+                        A digital platform for KİMCANKO, a Turkey-based animal rescue NGO, supporting
+                        international partnerships and increasing visibility for rescued animals and
+                        adoption initiatives. I contributed to the structure, responsive interface and
+                        user experience, including animal profiles, filters, media galleries and
+                        adoption/logistics information.
                     </p>
-
-
-                    <div class="photo-carousel" data-carousel>
-
-                        <div class="carousel-track">
-                            <div class="carousel-slide"><img src="assets/startuplogo.png" alt="Start-Up competition logo" loading="lazy"></div>
-                            <div class="carousel-slide"><img src="assets/startup1.jpeg" alt="Start-Up competition" loading="lazy"></div>
-                            <div class="carousel-slide"><img src="assets/startup2.jpeg" alt="Start-Up competition" loading="lazy"></div>
-                            <div class="carousel-slide"><img src="assets/startup3.png" alt="Start-Up competition" loading="lazy"></div>
-                        </div>
-
-                        <button class="carousel-btn prev" data-carousel-prev aria-label="Previous photo">←</button>
-                        <button class="carousel-btn next" data-carousel-next aria-label="Next photo">→</button>
-
-                        <div class="carousel-dots" data-carousel-dots></div>
-
-                    </div>
-
+                    <div class="tech-tags"><span><img src="assets/HTML.png" alt="" loading="lazy">HTML</span><span><img src="assets/CSS.png" alt="" loading="lazy">CSS</span><span><img src="assets/JavaScript.png" alt="" loading="lazy">JavaScript</span><span><img src="assets/GitHub.png" alt="" loading="lazy">GitHub Pages</span><span><img src="assets/Git.png" alt="" loading="lazy">Git</span><span><img src="assets/GitHub.png" alt="" loading="lazy">GitHub</span></div>
+                    <a href="https://partners.kimcanko.org" class="card-link" target="_blank" rel="noopener noreferrer">View project ↗</a>
                 </div>
-
             </article>
-
-
         </div>
 
     </div>
 
 </section>
-
-
-
-<!-- ================= CONTACT ================= -->
-
-<section
-    id="contact"
-    class="contact-section"
->
-
-    <p class="eyebrow reveal-chars" aria-label="GET IN TOUCH">
-        <span aria-hidden="true">GET IN TOUCH</span>
-    </p>
-
-
-    <h2 class="reveal-chars" aria-label="Let's build something great.">
-
-        <span aria-hidden="true">
-            Let's build
-            <br>
-            something <span class="accent">great.</span>
-        </span>
-
-    </h2>
-
-
-    <a
-        href="mailto:anafrajor@gmail.com"
-        class="email-link fade-up"
-    >
-        anafrajor@gmail.com ↗
-    </a>
-
-
-    <div class="social-links fade-up">
-
-        <a
-            href="https://github.com/anabeatrizfranca"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            GitHub ↗
-        </a>
-
-
-        <a
-            href="https://www.linkedin.com/in/ana-beatriz-franca"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            LinkedIn ↗
-        </a>
-
-
-        <a
-            href="https://scholar.google.com/citations?pli=1&authuser=1&user=o1WYJUQAAAAJ"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Google Scholar ↗
-        </a>
-
-    </div>
-
-</section>
-
 
 </main>
 
 
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact-section">
+
+    <p class="eyebrow reveal-chars" aria-label="GET IN TOUCH"><span aria-hidden="true" data-i18n-html="touch">GET IN TOUCH</span></p>
+
+    <h2 class="reveal-chars" aria-label="Let's build something great.">
+        <span aria-hidden="true" data-i18n-html="build">Let's build<br>something <span class="accent">great.</span></span>
+    </h2>
+
+    <a href="mailto:anafrajor@gmail.com" class="email-link fade-up">anafrajor@gmail.com ↗</a>
+
+    <div class="social-links fade-up">
+        <a href="https://github.com/anabeatrizfranca" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/ana-beatriz-franca" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://scholar.google.com/citations?pli=1&authuser=1&user=o1WYJUQAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+        <a href="https://www.instagram.com/anabeatrizfrajor/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    </div>
+
+</section>
+
 
 <!-- ================= FOOTER ================= -->
-
 <footer>
-
-    <p>
-        © 2026 Ana Beatriz
-    </p>
-
-    <p>
-        Built with curiosity.
-    </p>
-
+    <p>© 2026 Ana Beatriz</p>
+    <p>Built with curiosity.</p>
 </footer>
 
 
-
-<!-- ================= LET'S TALK CARD (MODAL) ================= -->
-
-<div
-    class="talk-modal"
-    id="talkModal"
-    aria-hidden="true"
->
-
+<!-- ================= LET'S TALK MODAL ================= -->
+<div class="talk-modal" id="talkModal" aria-hidden="true">
     <div class="talk-modal-content">
+        <button class="close-talk" id="closeTalk" aria-label="Close">×</button>
 
-        <button
-            class="close-talk"
-            id="closeTalk"
-            aria-label="Close"
-        >
-            ×
-        </button>
+        <p class="eyebrow" data-i18n-html="touch">GET IN TOUCH</p>
 
+        <h2 data-i18n-html="build">Let's build<br>something <span class="accent">great.</span></h2>
 
-        <p class="eyebrow">
-            GET IN TOUCH
-        </p>
-
-
-        <h2>
-
-            Let's build
-            <br>
-
-            something <span class="accent">great.</span>
-
-        </h2>
-
-
-        <a
-            href="mailto:anafrajor@gmail.com"
-            class="email-link"
-        >
-            anafrajor@gmail.com ↗
-        </a>
-
+        <a href="mailto:anafrajor@gmail.com" class="email-link">anafrajor@gmail.com ↗</a>
 
         <div class="social-links">
-
-            <a
-                href="https://github.com/anabeatrizfranca"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                GitHub ↗
-            </a>
-
-
-            <a
-                href="https://www.linkedin.com/in/ana-beatriz-franca"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                LinkedIn ↗
-            </a>
-
-
-            <a
-                href="https://scholar.google.com/citations?pli=1&authuser=1&user=o1WYJUQAAAAJ"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Google Scholar ↗
-            </a>
-
+            <a href="https://github.com/anabeatrizfranca" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/ana-beatriz-franca" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://scholar.google.com/citations?pli=1&authuser=1&user=o1WYJUQAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+        <a href="https://www.instagram.com/anabeatrizfrajor/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
         </div>
-
     </div>
-
 </div>
 
+<script>
+(function () {
+    var tl = document.querySelector('.timeline');
+    var prev = document.getElementById('tlPrev');
+    var next = document.getElementById('tlNext');
+    if (!tl || !prev || !next) return;
+    function step() {
+        var item = tl.querySelector('.timeline-item');
+        return item ? item.offsetWidth + 24 : 400;
+    }
+    function update() {
+        prev.disabled = tl.scrollLeft <= 4;
+        next.disabled = tl.scrollLeft + tl.clientWidth >= tl.scrollWidth - 4;
+    }
+    prev.addEventListener('click', function () { tl.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { tl.scrollBy({ left: step(), behavior: 'smooth' }); });
+    tl.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+})();
+</script>
 
-
+<script src="i18n.js"></script>
 <script src="script.js"></script>
-
 </body>
-
 </html>
