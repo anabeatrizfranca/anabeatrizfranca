@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  Systems Analysis and Development student interested in software development, academic research and technological innovation. Building projects, learning languages, and exploring technology every day ;)
+  Systems Analysis and Development student interested in software development, academic research and technological innovation. Building projects, learning new languages, and exploring technology every day!
 </p>
 
 <div align="center">
