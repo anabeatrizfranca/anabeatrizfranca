@@ -5,6 +5,48 @@
    English is the default text written in the HTML;
    PT and ES are listed below, keyed by the English text.
 ========================================= */
+/* =========================================
+   IMAGE FALLBACK
+   Live servers (GitHub Pages, Netlify...) are case-sensitive,
+   local ones (Windows / macOS) usually are not. If an image
+   fails, try common name variants (case, spaces, extension).
+========================================= */
+(function () {
+    function variants(src) {
+        var m = src.match(/^(.*\/)?([^\/?#]+?)(\.[a-z0-9]+)$/i);
+        if (!m) return [];
+        var dir = m[1] || '', name = decodeURIComponent(m[2]), ext = m[3].toLowerCase();
+        var low = name.toLowerCase();
+        var names = [name, low, low.charAt(0).toUpperCase() + low.slice(1), name.toUpperCase(),
+                     low.replace(/ /g, '-'), low.replace(/ /g, '_'), name.replace(/ /g, '-')];
+        var exts = [ext, '.png', '.jpg', '.jpeg', '.webp'];
+        var out = [], seen = {};
+        seen[src] = true;
+        exts.forEach(function (e) {
+            names.forEach(function (n) {
+                var u = dir + encodeURI(n) + e;
+                if (!seen[u]) { seen[u] = true; out.push(u); }
+            });
+        });
+        return out;
+    }
+    function tryNext(img) {
+        var src = img.getAttribute('src');
+        if (!src || src.indexOf('data:') === 0) return;
+        if (!img._fb) img._fb = variants(src);
+        var next = img._fb.shift();
+        if (next) img.setAttribute('src', next);
+    }
+    document.addEventListener('error', function (e) {
+        if (e.target && e.target.tagName === 'IMG') tryNext(e.target);
+    }, true);
+    window.addEventListener('load', function () {
+        document.querySelectorAll('img').forEach(function (img) {
+            if (img.complete && img.naturalWidth === 0) tryNext(img);
+        });
+    });
+})();
+
 (function () {
 
     var STORE_KEY = 'ab-portfolio-lang';
@@ -123,6 +165,8 @@
             'Uma plataforma digital para a KİMCANKO, ONG de resgate animal sediada na Turquia, que apoia parcerias internacionais e aumenta a visibilidade de animais resgatados e iniciativas de adoção. Contribuí com a estrutura, a interface responsiva e a experiência do usuário, incluindo perfis de animais, filtros, galerias de mídia e informações de adoção/logística.',
             'Una plataforma digital para KİMCANKO, ONG de rescate animal con sede en Turquía, que apoya alianzas internacionales y aumenta la visibilidad de animales rescatados e iniciativas de adopción. Contribuí con la estructura, la interfaz responsiva y la experiencia de usuario, incluyendo perfiles de animales, filtros, galerías multimedia e información de adopción/logística.'],
 
+        'CERTIFICATION': ['CERTIFICAÇÃO', 'CERTIFICACIÓN'],
+        '← Back to portfolio': ['← Voltar ao portfólio', '← Volver al portafolio'],
         'Built with curiosity.': ['Feito com curiosidade.', 'Hecho con curiosidad.']
     };
 
@@ -142,10 +186,11 @@
         }
     };
 
+    var titleEl = document.querySelector('title');
     var TITLE = {
         en: document.title,
-        pt: 'Ana Beatriz — Desenvolvimento de Software',
-        es: 'Ana Beatriz — Desarrollo de Software'
+        pt: (titleEl && titleEl.getAttribute('data-pt')) || 'Ana Beatriz — Desenvolvimento de Software',
+        es: (titleEl && titleEl.getAttribute('data-es')) || 'Ana Beatriz — Desarrollo de Software'
     };
 
     function norm(s) { return s.replace(/\s+/g, ' ').trim(); }
