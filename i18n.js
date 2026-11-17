@@ -167,6 +167,9 @@
 
         'CERTIFICATION': ['CERTIFICAÇÃO', 'CERTIFICACIÓN'],
         '← Back to portfolio': ['← Voltar ao portfólio', '← Volver al portafolio'],
+        'Choose a language': ['Escolha o idioma', 'Elige el idioma'],
+        'CV in English': ['CV em Inglês', 'CV en Inglés'],
+        'CV in Portuguese': ['CV em Português', 'CV en Portugués'],
         'Built with curiosity.': ['Feito com curiosidade.', 'Hecho con curiosidad.']
     };
 
@@ -275,4 +278,33 @@
         });
     });
 
+})();
+
+
+/* =========================================
+   CV DOWNLOAD MODAL (English / Portuguese)
+========================================= */
+(function () {
+    var modal = document.getElementById('cvModal');
+    if (!modal) return;
+
+    function open(e) {
+        if (e) e.preventDefault();
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+    }
+    function close() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+    }
+
+    document.querySelectorAll('.cv-trigger').forEach(function (t) {
+        t.addEventListener('click', open);
+    });
+    document.getElementById('closeCv').addEventListener('click', close);
+    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    modal.querySelectorAll('.cv-option').forEach(function (a) {
+        a.addEventListener('click', function () { setTimeout(close, 150); });
+    });
 })();

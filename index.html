@@ -42,7 +42,7 @@
     </nav>
 
     <div class="nav-actions">
-        <a href="assets/Ana-Beatriz-CV.pdf" class="nav-resume" download>Resume <span>↓</span></a>
+        <a href="assets/cvenglish.pdf" class="nav-resume cv-trigger" download>Resume <span>↓</span></a>
         <button class="nav-cta" id="openTalk" type="button">Let's talk <span>↗</span></button>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
             <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
@@ -74,7 +74,7 @@
     <a href="#research">Research</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <a href="assets/Ana-Beatriz-CV.pdf" download>Resume ↓</a>
+    <a href="assets/cvenglish.pdf" class="cv-trigger" download>Resume ↓</a>
 
     <button class="mobile-theme-toggle" id="mobileThemeToggle" type="button">
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
@@ -125,7 +125,7 @@
 
         <div class="hero-buttons fade-up">
             <a href="#achievements" class="button button-primary">Explore my work <span>↓</span></a>
-            <a href="assets/Ana-Beatriz-CV.pdf" class="button button-secondary" download>Download CV <span>↓</span></a>
+            <a href="assets/cvenglish.pdf" class="button button-secondary cv-trigger" download>Download CV <span>↓</span></a>
         </div>
 
         <div class="currently fade-up">
@@ -214,7 +214,7 @@
         <article class="timeline-item">
         <div class="timeline-card">
             <div class="timeline-head">
-                <div class="timeline-logo"><img src="assets/logodemoday.png" alt="" loading="lazy"></div>
+                <div class="timeline-logo"><img src="assets/logo%20demoday.png" alt="" loading="lazy"></div>
                 <div>
                     <small>Porto Digital · Demo Day</small>
                     <h3>Technology Residency</h3>
@@ -568,6 +568,29 @@
     <p>© 2026 Ana Beatriz</p>
     <p>Built with curiosity.</p>
 </footer>
+
+
+<!-- ================= CV MODAL ================= -->
+<div class="cv-modal" id="cvModal" aria-hidden="true">
+    <div class="cv-modal-content" role="dialog" aria-modal="true" aria-labelledby="cvTitle">
+        <button class="close-talk" id="closeCv" type="button" aria-label="Close">×</button>
+
+        <p class="cv-kicker">Download CV</p>
+        <h2 id="cvTitle">Choose a language</h2>
+
+        <a class="cv-option" href="assets/cvenglish.pdf" download>
+            <img class="flag" src="assets/english.png" alt="" loading="lazy">
+            <span>CV in English</span>
+            <em>PDF ↓</em>
+        </a>
+
+        <a class="cv-option" href="assets/cvportugues.pdf" download>
+            <img class="flag" src="assets/portuguese.png" alt="" loading="lazy">
+            <span>CV in Portuguese</span>
+            <em>PDF ↓</em>
+        </a>
+    </div>
+</div>
 
 
 <!-- ================= LET'S TALK MODAL ================= -->
